@@ -764,289 +764,7 @@
             fill: var(--cinnabar) !important;
         }
 
-        /* =============================================
-           9. V2 卡片样式增强
-           ============================================= */
-        .card-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            margin: 5px 0 8px 0;
-        }
-
-        .card-tab {
-            font-size: 10px;
-            color: #666;
-            background: rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 1px 5px;
-            border-radius: 2px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .card-tab:hover {
-            background: #e0e0e0;
-            color: #000;
-        }
-
-        .card-official-post {
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .card-official-post span {
-            font-weight: bold;
-        }
-
-
-        /* 1. 名字下方的灰色信息条 */
-        .info-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #e6e6e6;
-            /* 浅灰色背景 */
-            margin: 4px 10px;
-            /* 上下边距 */
-            padding: 2px 0;
-            border-radius: 2px;
-        }
-
-        /* 信息条里的“按钮” (属性/记事) */
-        .info-btn {
-            font-size: 11px;
-            color: #333;
-            padding: 0 6px;
-            border-right: 1px solid #ccc;
-            /* 右边的小竖线 */
-            cursor: pointer;
-            font-weight: bold;
-            background: #d4d4d4;
-            /* 按钮稍微深一点灰色，区分感 */
-            margin-right: 2px;
-        }
-
-        .info-btn:hover {
-            background: #bbb;
-        }
-
-        /* 信息条里的“文字” (年龄/状态) */
-        .info-text {
-            font-size: 10px;
-            /* 字体改小，更精致 */
-            color: #444;
-            padding: 0 5px;
-            font-weight: bold;
-            /* 加粗一点看得清 */
-            white-space: nowrap;
-            /* 防止换行 */
-        }
-
-        /* 2. 状态颜色 */
-        .status-red {
-            color: #d90000 !important;
-        }
-
-        /* 已故/重病用红色 */
-        .status-normal {
-            color: #444;
-        }
-
-        /* 3. 出身和官职行 */
-        .line-origin,
-        .line-official {
-            font-size: 13px;
-            /* 稍微大一点 */
-            margin: 3px 0;
-            color: #333;
-        }
-
-        .line-official {
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        /* 4. 虚线分割线 */
-        .card-divider {
-            border-top: 1px dashed #ccc;
-            margin: 6px 10px;
-            height: 1px;
-        }
-
-        /* 5. 底部标签 (原有的tag) 保持原样，微调位置 */
-        .tags-wrap {
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
-
-        /* 6. 官职等级颜色 */
-        .rank-purple {
-            color: #800080;
-        }
-
-        /* 紫 */
-        .rank-red {
-            color: #cc0000;
-        }
-
-        /* 绯红 */
-        .rank-green {
-            color: #008000;
-        }
-
-        /* 绿 */
-        .rank-blue {
-            color: #0000FF;
-        }
-
-        /* 青 */
-
-        /* === 修正后的信息条样式 (V3) === */
-
-        /* 1. 容器：不再有灰色背景，只负责排版 */
-        .info-bar {
-            display: flex;
-            justify-content: center;
-            /* 居中对齐 */
-            align-items: center;
-            background: none;
-            /* 去掉整条的背景 */
-            margin: 5px 0;
-            /* 上下边距 */
-            gap: 3px;
-            /* 关键：每个小方块之间的间隙 */
-        }
-
-        /* 2. 通用小方块样式 */
-        .info-block {
-            padding: 2px 5px;
-            /* 内边距 */
-            font-size: 8px;
-            /* 字体大小 */
-            color: #333;
-            /* 字体颜色 */
-            cursor: default;
-            font-weight: bold;
-            border-radius: 1px;
-            /* 稍微一点点圆角 */
-            height: 10px;
-            /* 固定高度，保证整齐 */
-            line-height: 16px;
-            /* 文字垂直居中 */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* 3. 左边深色块 (属性、记事) */
-        .info-block.dark {
-            background: #e4e2e2;
-            /* 深灰色背景 */
-            cursor: pointer;
-            /* 鼠标放上去变手型 */
-        }
-
-        .info-block.dark:hover {
-            background: #c0c0c0;
-        }
-
-        /* 4. 右边浅色块 (年龄、状态) */
-        .info-block.light {
-            background: #f4f4f4;
-            /* 极淡的灰色/米白色背景 */
-            white-space: nowrap;
-            /* 防止文字换行 */
-        }
-
-        /* 5. 状态文字颜色 */
-        .status-red {
-            color: #cc0000 !important;
-        }
-
-        /* 已故/重病 红色 */
-        .status-normal {
-            color: #333;
-        }
-
-        /* === 官职样式微调 === */
-        .line-official {
-            font-size: 10px;
-            /* 之前是14px，现在改小一点 */
-            margin: 3px 0;
-            font-weight: bold;
-            color: #333;
-            display: inline-block;
-            /* 为了让下划线只包裹文字 */
-            border-bottom: 1px solid #ddd;
-            /* 细细的灰色下划线 */
-            padding-bottom: 1px;
-        }
-
-        /* 如果你想要那种彩色的下划线（跟官职颜色一致），用下面这个 */
-        .line-official span {
-            border-bottom: 1px solid currentColor;
-            /* 下划线颜色跟随文字颜色 */
-            padding-bottom: 1px;
-        }
-
-        /* === 跳转链接颜色强制修正 === */
-        .jump-link {
-            cursor: pointer;
-            font-size: 11px;
-            /* 字体小一点 */
-            margin-left: 3px;
-            text-decoration: none !important;
-            /* 去掉默认下划线，我们自己控制 */
-        }
-
-        .jump-link:hover {
-            text-decoration: underline !important;
-        }
-
-        /* 强制颜色（确保生效） */
-        .jump-link.type-imperial {
-            color: #8B0000 !important;
-        }
-
-        /* 皇室深红 */
-        .jump-link.type-noble {
-            color: #2F4F4F !important;
-        }
-
-        /* 世家深青 */
-        .jump-link.type-official {
-            color: #556B2F !important;
-        }
-
-        /* 官宦橄榄绿 */
-        .jump-link.type-common {
-            color: #696969 !important;
-        }
-
-        /* 寒门深灰 */
-        /* 默认颜色（如果没有匹配到类型） */
-        .jump-link.default {
-            color: #4682B4 !important;
-        }
-
-        /* 默认蓝色 */
-
-        /* =============================================
-           10. 次序与折叠按钮样式
-           ============================================= */
-
-        /* 圆圈排行文字样式 */
-        .birth-order-text {
-            font-size: 14px;
-            font-weight: bold;
-            fill: #fff;
-            /* 数字统一为白色 */
-            text-anchor: middle;
-            dominant-baseline: central;
-            pointer-events: none;
-        }
+        
     </style>
 </head>
 
@@ -1056,7 +774,7 @@
     <header>
         <h1>世家谱系录</h1>
         <div class="toolbar">
-            <button class="btn" id="toggle-custom-btn" onclick="toggleCustomVisibility()">显示次要关系</button>
+            <button class="btn" id="toggle-custom-btn" onclick="toggleCustomVisibility()">隐藏次要关系</button>
             <button class="btn btn-highlight" id="paste-btn" onclick="pastePerson()" disabled>粘贴人物</button>
             <button class="btn btn-gold" onclick="layoutTreeComplex()">自动整理</button>
             <button class="btn" onclick="saveData()">保存</button>
@@ -1125,7 +843,6 @@
                             id="p-alias" class="form-input"></div>
                 </div>
 
-
                 <div class="form-group">
                     <label class="form-label">阶级出身</label>
                     <select id="p-style" class="form-input">
@@ -1158,38 +875,6 @@
 
                 <div class="form-group"><label class="form-label">封号 / 身份</label><input type="text" id="p-title"
                         class="form-input"></div>
-
-                <!-- 找到之前的“年龄”和“健康”那一行，替换为以下代码 -->
-                <div class="form-group">
-                    <label class="form-label">健康状况</label>
-                    <select id="p-health" class="form-input" onchange="syncStatusFromHealth()">
-                        <option value="健康">健康</option>
-                        <option value="生病">生病</option>
-                        <option value="重病">重病</option>
-                        <option value="死亡">死亡</option>
-                    </select>
-                </div>
-
-                <div class="row">
-                    <div class="form-group" style="flex:1">
-                        <label class="form-label">官职等级</label>
-                        <select id="p-official-rank" class="form-input">
-                            <option value="">无</option>
-                            <option value="一等">一等</option>
-                            <option value="二等">二等</option>
-                            <option value="三等">三等</option>
-                            <option value="四等">四等</option>
-                            <option value="五等">五等</option>
-                            <option value="六等">六等</option>
-                            <option value="七等">七等</option>
-                            <option value="八等">八等</option>
-                            <option value="九等">九等</option>
-                        </select>
-                    </div>
-                    <div class="form-group" style="flex:2"><label class="form-label">官职名称</label><input type="text"
-                            id="p-official-post" class="form-input" placeholder="太傅/将军..."></div>
-                </div>
-
                 <div class="form-group"><label class="form-label">特征标签</label><input type="text" id="p-tags"
                         class="form-input" placeholder="空格分隔"></div>
                 <div class="form-group"><label class="form-label">性格</label><input type="text" id="p-personality"
@@ -1211,7 +896,7 @@
 
                 <div class="form-group">
                     <label class="form-label">状态</label>
-                    <select id="p-status" class="form-input" onchange="syncHealthFromStatus()"> <!-- 注意这里加了 onchange -->
+                    <select id="p-status" class="form-input">
                         <option value="alive">在世</option>
                         <option value="dead">已故</option>
                     </select>
@@ -1345,6 +1030,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <script>
+
+// 1. 禁止右键菜单
+        document.oncontextmenu = function() {
+            return false;
+        };
+
+        // 2. 禁止选中复制
+        document.onselectstart = function() {
+            return false;
+        };
+
+        // 3. 禁止按键（F12, Ctrl+U, Ctrl+S, Ctrl+C 等）
+        document.onkeydown = function(e) {
+            // F12
+            if (e.keyCode == 123) {
+                return false;
+            }
+            // Ctrl + S (保存)
+            if (e.ctrlKey && e.keyCode == 83) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl + U (查看源码)
+            if (e.ctrlKey && e.keyCode == 85) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl + C (复制)
+            if (e.ctrlKey && e.keyCode == 67) {
+                e.preventDefault();
+                return false;
+            }
+        };
+
         /* =============================================
            1. 全局配置与数据模型
            ============================================= */
@@ -1354,7 +1073,7 @@
         let dragNode = null, dragOffset = {};
         let currentStories = [];
         let currentStoryIdx = null;
-        let showCustomRels = false; // 控制自定义关系的显示/隐藏
+        let showCustomRels = true; // 控制自定义关系的显示/隐藏
         let dragRel = null; // 记录正在拖拽哪条线
         let dragRelIdx = -1; // 记录关系索引
         let activeRel = null; // 当前正在被调节的关系
@@ -1438,13 +1157,14 @@
 
             wm.innerText = f.name.substring(0, 4);
 
-            // --- 背景代数条 ---
+            // 渲染背景代数标识
             let maxGen = 1;
             const GEN_STEP = 880;
             f.members.forEach(m => {
                 let g = Math.round((m.x - 100) / GEN_STEP) + 1;
                 if (g > maxGen) maxGen = g;
             });
+
             for (let i = 1; i <= maxGen; i++) {
                 const strip = document.createElement('div');
                 strip.className = 'gen-strip';
@@ -1453,34 +1173,29 @@
                 bgLayer.appendChild(strip);
             }
 
-            // --- 连线 (逻辑已在之前修正，这里保持一致) ---
+            // 连线逻辑：排序
             const sortedRels = [...f.rels].sort((a, b) => {
-                const getScore = (r) => {
-                    if (r.type === 'custom') return 0;
-                    if (r.type === 'secondary') return 1;
-                    if (r.type === 'parent') {
-                        const child = f.members.find(m => m.id === r.t);
-                        if (child && child.lineage === 'lineage-di') return 10;
-                        return 2;
-                    }
-                    if (r.type === 'spouse') return 10;
-                    return 0;
-                };
-                return getScore(a) - getScore(b);
+                const targetA = f.members.find(m => m.id === a.t);
+                const targetB = f.members.find(m => m.id === b.t);
+                let scoreA = (a.type === 'spouse' ? 2 : (a.type === 'parent' && targetA?.lineage === 'lineage-di' ? 1 : 0));
+                let scoreB = (b.type === 'spouse' ? 2 : (b.type === 'parent' && targetB?.lineage === 'lineage-di' ? 1 : 0));
+                return scoreA - scoreB;
             });
 
+            // 【核心修复点】：传入 r 而不是 r.type
             sortedRels.forEach(r => {
                 const s = f.members.find(m => m.id === r.s);
                 const t = f.members.find(m => m.id === r.t);
                 if (s && t) drawLinePath(s, t, r, svg);
             });
+
             sortedRels.forEach(r => {
                 const s = f.members.find(m => m.id === r.s);
                 const t = f.members.find(m => m.id === r.t);
                 if (s && t && r.type === 'custom') drawLinkLabel(s, t, r, svg);
             });
 
-            // --- 卡片渲染 ---
+            // 渲染人物卡片
             f.members.forEach(m => {
                 const el = document.createElement('div');
                 el.className = `card ${m.style} ${m.status === 'dead' ? 'dead' : ''} ${sel.includes(m.id) ? 'selected' : ''}`;
@@ -1493,70 +1208,16 @@
 
                 const imgHTML = m.img ? `<img src="${m.img}" class="card-img">` : `<div class="card-img" style="display:flex;align-items:center;justify-content:center;color:#ccc;font-size:40px;background:#f5f5f5"><i class="fas fa-user"></i></div>`;
                 const badgeHTML = m.title ? `<div class="card-badge">${m.title}</div>` : '';
-
-                // === 这里的年龄代码已经被删除 ===
-
-                // 状态块
-                const healthVal = m.health || '健康';
-                const isBadHealth = (healthVal === '死亡' || healthVal === '重病');
-                const statusColorClass = isBadHealth ? 'status-red' : 'status-normal';
-                const statusHTML = `<div class="info-block light ${statusColorClass}">状态 ${healthVal}</div>`;
-
-                // 组合：只剩3个块了 (属性、记事、状态)
-                const infoBarHTML = `
-            <div class="info-bar">
-                <div class="info-block dark" onclick="showAttributes('${m.id}', event)">属性</div>
-                <div class="info-block dark" onclick="showStories('${m.id}', event)">记事</div>
-                ${statusHTML}
-            </div>
-        `;
-
-                // 出身
-                let originHTML = `<div class="line-origin">出身: ${m.origin || f.name}</div>`;
-                if (m.origin && m.origin !== f.name) {
-                    const originFamKey = Object.keys(db.families).find(k => db.families[k].name === m.origin);
-                    const originFam = originFamKey ? db.families[originFamKey] : null;
-                    const famType = originFam ? (originFam.type || 'type-common') : 'default';
-                    originHTML = `<div class="line-origin">出身: ${m.origin} <span class="jump-link ${famType}" onclick="jump('${m.origin}', event)">[跳转]</span></div>`;
-                }
-
-                // 官职
-                let officialHTML = '';
-                if (m.official_rank && m.official_post) {
-                    const colorClass = getRankColorClass(m.official_rank);
-                    officialHTML = `<div class="line-official">【官职：<span class="${colorClass}">${m.official_rank} · ${m.official_post}</span>】</div>`;
-                }
-
                 const tagsHtml = m.tags ? `<div class="tags-wrap">${m.tags.split(' ').map(t => `<span class="tag">${t}</span>`).join('')}</div>` : '';
 
-                el.innerHTML = `
-            ${badgeHTML}
-            ${imgHTML}
-            <div class="card-body">
-                <div class="card-name">${m.surname}${m.name}</div>
-                ${infoBarHTML}
-                ${originHTML}
-                ${officialHTML}
-                <div class="card-divider"></div>
-                ${tagsHtml}
-            </div>`;
+                let info = `出身: ${m.origin || f.name}`;
+                if (m.origin && m.origin !== f.name) info += ` <span class="jump-link" onclick="jump('${m.origin}', event)">[跳转]</span>`;
 
+                el.innerHTML = `${badgeHTML}${imgHTML}<div class="card-body"><div class="card-name">${m.surname}${m.name}</div><div class="card-info">${info}</div>${tagsHtml}</div>`;
                 box.appendChild(el);
             });
 
             updateBottomPanel();
-        }
-
-        // 确保这个辅助函数也在你的代码里 (放在 renderCanvas 下面即可)
-        function getRankColorClass(rank) {
-            if (!rank) return '';
-            const firstChar = rank.charAt(0);
-            // 简单的判断逻辑
-            if (['一', '二', '三'].includes(firstChar)) return 'rank-purple';
-            if (['四', '五'].includes(firstChar)) return 'rank-red';
-            if (['六', '七'].includes(firstChar)) return 'rank-green';
-            if (['八', '九'].includes(firstChar)) return 'rank-blue';
-            return '';
         }
         /* =============================================
            核心连线绘制函数 (修正版：视觉隐藏父亲线)
@@ -1565,24 +1226,19 @@
           21. 连线绘制 - 第一步：画线
           ============================================= */
         function drawLinePath(p1, p2, relData, svg) {
-            if (relData.isHidden) return; // 隐藏第一个家长的线
-
             const type = relData.type;
             const w = 170, h = 300;
-            const x1 = p1.x + w;
-            const y1 = p1.y + h / 2;
-            const x2 = p2.x;
-            const y2 = p2.y + h / 2;
+            const x1 = p1.x + w, y1 = p1.y + h / 2;
+            const x2 = p2.x, y2 = p2.y + h / 2;
 
             if (type === 'custom' && typeof showCustomRels !== 'undefined' && !showCustomRels) return;
 
-            // 创建路径
             const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
             let d = "";
-            let isRedLine = false;
 
             if (type === 'custom') {
                 const cp = relData.cp || { x: (x1 + x2) / 2, y: (y1 + y2) / 2 - 50 };
+                // 让线精准穿过文字中心的数学修正
                 const rx = 2 * cp.x - 0.5 * (x1 + x2);
                 const ry = 2 * cp.y - 0.5 * (y1 + y2);
                 d = `M${x1},${y1} Q${rx},${ry} ${x2},${y2}`;
@@ -1591,81 +1247,20 @@
             } else if (type === 'parent') {
                 const midX = x1 + 80;
                 d = `M${x1},${y1} L${midX},${y1} L${midX},${y2} L${x2},${y2}`;
-                isRedLine = (p2.lineage === 'lineage-di');
-                path.setAttribute("stroke", isRedLine ? "#c02c38" : "#999"); // 庶出线设为灰色
-                path.setAttribute("stroke-width", isRedLine ? "2.5" : "1.5");
+                path.setAttribute("stroke", p2.lineage === 'lineage-di' ? "#c02c38" : "#333");
+                if (p1.surname === p2.surname) path.setAttribute("stroke-opacity", "0");
             } else {
                 const midX = x1 + 30;
                 d = `M${x1},${y1} L${midX},${y1} L${midX},${y2} L${x2},${y2}`;
-                isRedLine = (type === 'spouse');
-                path.setAttribute("stroke", isRedLine ? "#c02c38" : "#333");
-                path.setAttribute("stroke-width", isRedLine ? "2.5" : "1.5");
+                path.setAttribute("stroke", type === 'secondary' ? "#333" : "#c02c38"); // 侧室改为深灰实线
             }
 
             path.setAttribute("d", d);
             path.setAttribute("fill", "none");
-            path.style.pointerEvents = "none";
+            const isDi = (type === 'spouse' || (type === 'parent' && p2.lineage === 'lineage-di'));
+            path.setAttribute("stroke-width", isDi ? "2.5" : "1.5");
+            path.style.pointerEvents = "none"; // 线条不接收点击，防止干扰文字
             svg.appendChild(path);
-
-            // --- 【新功能】绘制排行圆圈 ---
-            if (type === 'parent' && relData.birthOrder) {
-                const midX = x1 + 80;
-                // 圆圈位置放在折线水平段的起点（靠近拐角处）
-                const circleX = x2 - 20;
-                const circleY = y2;
-
-                const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-
-                // 绘制圆形背景
-                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                circle.setAttribute("cx", circleX);
-                circle.setAttribute("cy", circleY);
-                circle.setAttribute("r", "12"); // 半径
-                // 嫡出红底，庶出灰底
-                circle.setAttribute("fill", isRedLine ? "#c02c38" : "#999");
-
-                // 绘制数字
-                const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-                text.setAttribute("x", circleX);
-                text.setAttribute("y", circleY);
-                text.setAttribute("class", "birth-order-text");
-                text.textContent = relData.birthOrder;
-
-                g.appendChild(circle);
-                g.appendChild(text);
-                svg.appendChild(g);
-            }
-        }
-        function drawOrderMarker(svg, x, y, num, isSolid, color) {
-            const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
-
-            // 绘制圆圈
-            const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-            circle.setAttribute("cx", x);
-            circle.setAttribute("cy", y);
-            circle.setAttribute("r", "8");
-            if (isSolid) {
-                circle.setAttribute("fill", color);
-            } else {
-                circle.setAttribute("fill", "#fff");
-                circle.setAttribute("stroke", color);
-                circle.setAttribute("stroke-width", "1");
-            }
-
-            // 绘制数字
-            const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            text.setAttribute("x", x);
-            text.setAttribute("y", y + 3.5); // 微调文字对齐
-            text.setAttribute("text-anchor", "middle");
-            text.setAttribute("font-size", "10px");
-            text.setAttribute("font-family", "Arial");
-            text.setAttribute("font-weight", "bold");
-            text.setAttribute("fill", isSolid ? "#fff" : color);
-            text.textContent = num;
-
-            group.appendChild(circle);
-            group.appendChild(text);
-            svg.appendChild(group);
         }
 
         /* =============================================
@@ -1697,7 +1292,6 @@
         /* =============================================
            4. 人物管理逻辑 (CRUD)
            ============================================= */
-        // 找到 savePerson 函数，在 p 对象的定义中添加新字段
         function savePerson() {
             const f = db.families[db.cur];
             if (!f) return;
@@ -1706,7 +1300,6 @@
             if (!sName && !pName) return alert("姓名不能为空");
 
             const oldP = editId ? f.members.find(m => m.id === editId) : null;
-
             const p = {
                 id: editId || "p_" + Date.now(),
                 uid: oldP ? (oldP.uid || "u_" + Date.now()) : "u_" + Date.now(),
@@ -1720,13 +1313,6 @@
                 origin: document.getElementById('p-origin').value || f.name,
                 tags: document.getElementById('p-tags').value,
                 personality: document.getElementById('p-personality').value,
-
-                // --- 修改处：删除了 age，保留其他 ---
-                health: document.getElementById('p-health').value,
-                official_rank: document.getElementById('p-official-rank').value,
-                official_post: document.getElementById('p-official-post').value,
-                // --- 结束 ---
-
                 stories: JSON.parse(JSON.stringify(currentStories || [])),
                 img: tempImg || (oldP ? oldP.img : null),
                 x: oldP ? oldP.x : 100,
@@ -1800,10 +1386,6 @@
             document.getElementById('p-status').value = m.status;
             document.getElementById('p-tags').value = m.tags || '';
             document.getElementById('p-personality').value = m.personality || "";
-            document.getElementById('p-health').value = m.health || '健康';
-            document.getElementById('p-official-rank').value = m.official_rank || '';
-            document.getElementById('p-official-post').value = m.official_post || '';
-
             document.querySelector('.sidebar-right').classList.add('active');
             currentStories = JSON.parse(JSON.stringify(m.stories || []));
             renderStoryList();
@@ -1816,8 +1398,6 @@
                 document.getElementById('img-upload-box').classList.add('has-img');
             } else {
                 document.getElementById('img-upload-box').classList.remove('has-img');
-                preview.src = ""; // 清空预览
-
             }
         }
 
@@ -1849,11 +1429,10 @@
             editId = null; tempImg = null;
             currentStories = []; // 清空当前正在编辑的往事
             document.querySelectorAll('.form-input').forEach(e => e.value = "");
-            document.getElementById('p-gender').value = "女";
+            document.getElementById('p-gender').value = "男";
             document.getElementById('p-style').value = "style-noble";
-            document.getElementById('p-lineage').value = "lineage-di";
+            document.getElementById('p-lineage').value = "lineage-shu";
             document.getElementById('p-status').value = "alive";
-            document.getElementById('p-health').value = "健康"; // 默认健康
             document.getElementById('img-upload-box').classList.remove('has-img');
             document.getElementById('story-list').innerHTML = ""; // 清空侧边栏的故事列表显示
             document.querySelector('.sidebar-right').classList.remove('active');
@@ -2642,51 +2221,65 @@
            18. 快速繁衍后代功能 (完整终极版)
            ============================================= */
         function spawnChild() {
+            // 基础检查：必须选中两个人
             if (sel.length !== 2) return;
             const f = db.families[db.cur];
+
+            // p1：第一个选中的人（决定姓氏、阶级）
+            // p2：第二个选中的人（决定连线位置、宗法）
             const p1 = f.members.find(m => m.id === sel[0]);
             const p2 = f.members.find(m => m.id === sel[1]);
 
-            // --- 【新逻辑】计算排行：看 P1 已经有多少个孩子了 ---
-            // 统计 P1 作为起点(s) 的所有类型为 'parent' 的关系
-            const existingChildrenCount = f.rels.filter(r => r.s === p1.id && r.type === 'parent').length;
-            const birthOrder = existingChildrenCount + 1; // 当前排行
-
+            // 1. 姓氏逻辑：完全跟从第一个人
             const inheritedSurname = p1.surname;
-            let childStyle = p1.style;
-            if (p1.style === 'style-emperor') childStyle = 'style-royal';
-            else if (p1.style === 'style-royal') childStyle = 'style-branch';
 
-            let childLineage = 'lineage-di';
+            // 2. 阶级继承逻辑 (封装在内)
+            let childStyle = p1.style;
+            if (p1.style === 'style-emperor') {
+                childStyle = 'style-royal'; // 皇帝之子 -> 皇室
+            } else if (p1.style === 'style-royal') {
+                childStyle = 'style-branch'; // 皇室之子 -> 宗室
+            }
+
+            // 3. 宗法逻辑：自动判断父母关系
+            let childLineage = 'lineage-di'; // 默认嫡出
+            // 寻找 p1 和 p2 之间是否存在“侧室”关系
             const isSecondary = f.rels.find(r =>
                 ((r.s === p1.id && r.t === p2.id) || (r.s === p2.id && r.t === p1.id)) &&
                 r.type === 'secondary'
             );
-            if (isSecondary) childLineage = 'lineage-shu';
-
-            const newId = "p_" + Date.now();
-            const newChild = {
-                id: newId, uid: "u_" + Date.now(),
-                surname: inheritedSurname, name: "新后辈",
-                gender: "男", style: childStyle, lineage: childLineage,
-                status: "alive", origin: f.name, stories: [],
-                x: p2.x + 600, y: p2.y
-            };
-
-            f.members.push(newChild);
-
-            // --- 【核心修改】将 birthOrder 存入关系中 ---
-            // 第一个人（家主）的线：隐藏
-            f.rels.push({ s: p1.id, t: newId, type: 'parent', isHidden: true, birthOrder: birthOrder });
-            // 第二个人的线：显示，并带有排行
-            if (p1.id !== p2.id) {
-                f.rels.push({ s: p2.id, t: newId, type: 'parent', birthOrder: birthOrder });
+            if (isSecondary) {
+                childLineage = 'lineage-shu'; // 若为侧室所生，则为庶出
             }
 
-            if (typeof layoutTreeComplex === 'function') layoutTreeComplex();
-            clearSel();
-            renderCanvas();
-            if (typeof editP === 'function') editP(newId);
+            // 4. 创建新人物对象
+            const newId = "p_" + Date.now();
+            const newChild = {
+                id: newId,
+                uid: "u_" + Date.now(),
+                surname: inheritedSurname,
+                name: "新后辈",
+                gender: "男",
+                style: childStyle,
+                lineage: childLineage,
+                status: "alive",
+                origin: f.name,
+                stories: [],
+                // 初始位置设在第二个人附近
+                x: p2.x + 600,
+                y: p2.y
+            };
+
+            // 写入数据库
+            f.members.push(newChild);
+
+            // 5. 建立连线（核心：建立两条数据线，确保阶级同步能通过 p1 找到孩子）
+            // 连向第一个人（阶级提供者）
+            f.rels.push({ s: p1.id, t: newId, type: 'parent' });
+            // 连向第二个人（连线者）
+            if (p1.id !== p2.id) {
+                f.rels.push({ s: p2.id, t: newId, type: 'parent' });
+            }
 
             // 6. UI 交互与自动布局
             // 运行自动整理布局
@@ -2776,40 +2369,6 @@
             btn.innerText = showCustomRels ? "隐藏次要关系" : "显示次要关系";
             btn.classList.toggle('btn-highlight', !showCustomRels);
             renderCanvas(); // 重新渲染
-        }
-
-        /* === 新增：状态与健康联动逻辑 === */
-
-        // 当改变“健康状况”时
-        function syncStatusFromHealth() {
-            const health = document.getElementById('p-health').value;
-            const statusSelect = document.getElementById('p-status');
-
-            if (health === '死亡') {
-                statusSelect.value = 'dead'; // 自动选为“已故”
-            } else {
-                // 如果是从“死亡”改回“健康/生病”，状态自动变回“在世”
-                // (当然你也可以选择不自动变回，看需求，这里我做了自动变回方便操作)
-                if (statusSelect.value === 'dead') {
-                    statusSelect.value = 'alive';
-                }
-            }
-        }
-
-        // 当改变“人物状态”时
-        function syncHealthFromStatus() {
-            const status = document.getElementById('p-status').value;
-            const healthSelect = document.getElementById('p-health').value;
-            const healthDom = document.getElementById('p-health');
-
-            if (status === 'dead') {
-                healthDom.value = '死亡'; // 自动选为“死亡”
-            } else {
-                // 如果是从“已故”改回“在世”，且健康还是“死亡”，则重置为“健康”
-                if (healthSelect === '死亡') {
-                    healthDom.value = '健康';
-                }
-            }
         }
 
     </script>
